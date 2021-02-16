@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <meta name="author" content="Joaquin Sanchez Rodriguez">
+    <meta name="description" content="javascript-basic">
+    <title>javascript-basic</title>
+</head>
+
+<body>
+    <script>
+        var valor1 = parseInt(prompt("Introdueix el primer numero"));
+        var operador = prompt("Quina operació matemàtica vols realitzar? \n ( + | - | * | / )");
+        var valor2 = parseInt(prompt("Introdueix el segon numero"));
+
+        function calculadora(operador, valor1, valor2) {
+            if (operador == "+") {
+                return valor1 + valor2;
+            }
+            else if (operador == "-") {
+                return valor1 - valor2;
+            }
+            else if (operador == "*") {
+                return valor1 * valor2;
+            }
+            else if (operador == "/") {
+                if (valor2 == 0) {
+                    alert("∞ ¿Dividir per 0 pot produir una paradoxa espai temporal que acabaria amb l'univers conegut, desitja continuar? ∞ ");
+                    alert("∞ millor, torna a començar ∞ ");
+                }
+                else {
+                    return valor1 / valor2;
+                }
+            }
+        }
+        var resultat = calculadora(operador, valor1, valor2);
+        document.write("El resultat de la " + operador + " entre " + valor1 + " i " + valor2 + " es " + resultat);
+        alert("El resultat de la " + operador + " entre " + valor1 + " i " + valor2 + " es " + resultat);
+
+    </script>
+
+</body>
+
+</html>
